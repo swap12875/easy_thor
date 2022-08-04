@@ -39,9 +39,11 @@ let service_offered = [
  * calling the element to set the inner html on loading the page.
  */
 window.onload = function () {
+    console.log("page + path")
     var path = window.location.pathname;
+    console.log(path + "path")
     var page = path.split("/").pop();
-    console.log(page + path)
+    console.log(page + "page")
     pull_contents(service_offered, page)
 };
 
@@ -52,6 +54,7 @@ window.onload = function () {
  * @param {*} page 
  */
 function pull_contents(services, page) {
+    console.log("pull_contents started")
     // generally load all the common elements on the page, irrespective of the page /file name.
     document.getElementById("tag_line").innerHTML = tag_line
     document.getElementById("feel_free_to_contact").innerHTML = feel_free_to_contact
