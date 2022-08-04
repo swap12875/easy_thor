@@ -39,10 +39,14 @@ let service_offered = [
  * calling the element to set the inner html on loading the page.
  */
 window.onload = function () {
-    console.log("page + path")
-    var path = window.location.pathname;
-    console.log(path + "** this is path");
-    var page = path.split("/").pop();
+     let page = null;
+    switch (document.title) {
+        case 'Thor-contact us':
+            page = "contact_us";
+            break;
+        default:
+            page = "index.html";
+    }
     console.log(page + "** this is page");
     pull_contents(service_offered, page)
 };
