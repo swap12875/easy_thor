@@ -41,9 +41,9 @@ let service_offered = [
 window.onload = function () {
     console.log("page + path")
     var path = window.location.pathname;
-    console.log(path + "** this is path")
+    console.log(path + "** this is path");
     var page = path.split("/").pop();
-    console.log(page + "** this is page")
+    console.log(page + "** this is page");
     pull_contents(service_offered, page)
 };
 
